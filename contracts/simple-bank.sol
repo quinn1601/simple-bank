@@ -31,7 +31,7 @@ contract SimpleBank {
     // Added so ether sent to this contract is reverted if the contract fails
     // otherwise, the sender's money is transferred to contract
     function() external payable {
-        revert("Fallback Function called!");
+        revert("Wrong Function Call! State has been reverted!");
     }
 
     // Enroll a customer with the bank, giving them `_initialAmount` tokens for free
